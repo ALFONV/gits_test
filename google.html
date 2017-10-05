@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head >
      <meta charset="Utf-08">
     <link rel="stylesheet" type="text/css" href="style.css">
 	<title>GOOGLE</title>
 </head>
-<body>
+<body onload="javascript:open_infos();">
   <header>
-
+<!--<a href="#null" onclick="javascript:open_infos();">Ouvrir et centrer la Pop-Up</a>-->
 
     
 <center><button type="button" id="bouton" onclick="toggle_text('google');">AFFICHER LES ELEMENTS CENTRAUX</button><br></center>
@@ -30,7 +30,7 @@
   	</div>
   </header>
 
-</body>
+</body >
 <footer style="background-color:#f2f2f2; margin-top:230px; height:40px; ">
 <div>
 	<a href="#" style="text-decoration: none; color: black; margin-top: 12px; ">Publicite</a> <a href="#" style="text-decoration: none;color: black;margin-left: 10px;">Entreprise</a>  <a href="#" style="text-decoration: none;color: black;margin-left: 10px;">A propos</a> <a href="#" style="margin-left: 700px; color: black; text-decoration: none;">Confidentialite</a>  <a href="#" style="margin-left: 10px; text-decoration: none; color: black;">Conditions</a> <a href="#" style="margin-left: 10px; text-decoration:none;color: black;">Parametres</a> <a href="#" style="margin-left: 10px; text-decoration:none;color: black;">Utiliser google.ci</a>
@@ -62,10 +62,29 @@ function toggle_text(id) {
     document.location.href="https://www.google.fr/#q=" + surface;
   }
 
-
-
-
 </script>
+ <script type="text/javascript">
+                <!--
+                        function open_infos()
+                        {
+                                width = 300;
+                                height = 200;
+                                if(window.innerWidth)
+                                {
+                                        var left = (window.innerWidth-width)/2;
+                                        var top = (window.innerHeight-height)/2;
+                                }
+                                else
+                                {
+                                        var left = (document.body.clientWidth-width)/2;
+                                        var top = (document.body.clientHeight-height)/2;
+                                }
+                                window.open('pop_up.html','nom_de_ma_popup','menubar=no, scrollbars=no, top='+top+', left='+left+', width='+width+', height='+height+'');
+                        }
+                -->
+                </script>
+               
+
 
 	
 </footer>
